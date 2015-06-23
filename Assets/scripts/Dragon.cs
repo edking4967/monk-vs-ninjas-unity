@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Dragon : MonoBehaviour {
-/*
+
 	Rigidbody2D rb;
 
 	// Use this for initialization
@@ -10,11 +10,14 @@ public class Dragon : MonoBehaviour {
 		rb = GetComponent<Rigidbody2D> ();
 		rb.mass = 0;
 
+		//rb.AddForce(new Vector2(0,1));
+
+
 		
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		rb.velocity = new Vector2 (0, 0);
-	}*/
+		rb.velocity = new Vector2 (0, .2f);
+	}
 }
