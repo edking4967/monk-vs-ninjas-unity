@@ -15,29 +15,35 @@ public class Timer
 {
 	private float interval;
 	private float timeSave;
-	private bool isSet;
+	private bool running;
 
 	public Timer (float interval)
 	{
 		this.interval = interval;
-		isSet = false;
+		running = false;
 	}
 
 	public void set()
 	{
-		isSet = true;
+		running = true;
 		timeSave = Time.time;
+	}
+
+	public bool isRunning()
+	{
+		return running;
 	}
 
 	public bool check()
 	{
-		if (!isSet) {
+		if (!running || (Time.time - timeSave) <= interval)
+		{
 			return false;
 		} 
 		else 
 		{
-			//isSet = false;
-			return ( (Time.time - timeSave) >= interval);
+			running = false;
+			return true;
 		}	
 	}
 }
