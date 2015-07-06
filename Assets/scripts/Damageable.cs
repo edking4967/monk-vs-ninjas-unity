@@ -17,6 +17,8 @@ public class Damageable : MonoBehaviour {
 	{
 		if (c.gameObject.tag == "Projectile") {
 			doDamage ();
+
+			Destroy(c.gameObject);
 		}
 	}
 
