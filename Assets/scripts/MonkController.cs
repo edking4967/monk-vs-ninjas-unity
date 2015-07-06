@@ -60,7 +60,7 @@ public class MonkController : MonoBehaviour {
 	public void fireProjectile()
 	{
 		Debug.Log ("fireProjectile");	
-		GameObject proj = (GameObject)Instantiate(Resources.Load("projectile")); 
+		GameObject proj = (GameObject)Instantiate(Resources.Load("prefabs/projectile")); 
 		proj.transform.position = monk.transform.position;
 		Vector2 vel = new Vector2 (.1f,0);
 
