@@ -1,13 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/DialogueTrigger.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../Spacecats/Spacecats/Assets/Resources/Scripts/PowerUp/WeaponUp.cs">
     <Files>
-      <File FileName="Assets/scripts/Dragon.cs" Line="27" Column="23" />
-      <File FileName="Assets/scripts/DragonBody.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/Timer.cs" Line="1" Column="1" />
-      <File FileName="Assets/InvisiTrigger.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/CSharpSmoothFollow2D.cs" Line="1" Column="1" />
-      <File FileName="Assets/DialogueTrigger.cs" Line="16" Column="24" />
+      <File FileName="../Spacecats/Spacecats/Assets/Resources/Scripts/PowerUp/StatsUp.cs" Line="6" Column="9" />
+      <File FileName="../Spacecats/Spacecats/Assets/Resources/Scripts/PowerUp/WeaponUp.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
