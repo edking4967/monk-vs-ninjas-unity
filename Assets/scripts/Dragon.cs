@@ -18,10 +18,11 @@ public class Dragon : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 
-		if (!isMoving)
-			rb.AddForce (new Vector2 (0, 9.81f));
-		else
+		if (isMoving)
 			rb.velocity = new Vector2 (0, 1);
+		else
+			rb.AddForce (new Vector2 (0, 9.81f));
+			
 	}
 
 	void OnTriggerEnter2D(Collider2D collider)

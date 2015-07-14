@@ -10,7 +10,7 @@ public class PlayerAnimation : MonoBehaviour, GameEventListener {
 	// Use this for initialization
 	void Start () {
 		animator = GetComponent<Animator> ();
-		animator.Play("idle");
+		//animator.Play("resting");
 		GameEventManager.registerListener(this);	
 	}
 	

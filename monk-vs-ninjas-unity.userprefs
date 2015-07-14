@@ -1,10 +1,23 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../Spacecats/Spacecats/Assets/Resources/Scripts/PowerUp/WeaponUp.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/Water/Water.cs">
     <Files>
-      <File FileName="../Spacecats/Spacecats/Assets/Resources/Scripts/PowerUp/StatsUp.cs" Line="6" Column="9" />
-      <File FileName="../Spacecats/Spacecats/Assets/Resources/Scripts/PowerUp/WeaponUp.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/Water/Water.cs" Line="265" Column="57" />
+      <File FileName="Assets/scripts/FloatingPlatform.cs" Line="6" Column="20" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Assembly-CSharp" expanded="True">
+            <Node name="scripts" expanded="True">
+              <Node name="Water" expanded="True">
+                <Node name="Water.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
