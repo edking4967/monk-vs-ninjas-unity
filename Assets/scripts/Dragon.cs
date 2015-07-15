@@ -27,6 +27,7 @@ public class Dragon : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D collider)
 	{
-		isMoving = false;
+		if(collider.gameObject.tag == "DragonStop")
+			isMoving = false;
 	}
 }
