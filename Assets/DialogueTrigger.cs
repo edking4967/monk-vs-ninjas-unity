@@ -25,7 +25,7 @@ public class DialogueTrigger : MonoBehaviour {
 		GUI.skin = skin;
 		GUILayout.BeginArea(new Rect(50,50, 250,250));
 		GUILayout.BeginVertical();
-		GUILayout.Box("Howdy.");
+		GUILayout.Box("Hello.");
 		GUILayout.EndVertical();
 		
 		GUILayout.EndArea ();

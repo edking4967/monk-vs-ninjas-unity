@@ -58,6 +58,7 @@
      <Compile Include="Assets\scripts\ExtensionMethods.cs" />
      <Compile Include="Assets\scripts\FloatingPlatform.cs" />
      <Compile Include="Assets\scripts\GameManager.cs" />
+     <Compile Include="Assets\scripts\MeshRendererSortingLayersEditor.cs" />
      <Compile Include="Assets\scripts\MonkController.cs" />
      <Compile Include="Assets\scripts\Platform.cs" />
      <Compile Include="Assets\scripts\PlatformerController.cs" />
