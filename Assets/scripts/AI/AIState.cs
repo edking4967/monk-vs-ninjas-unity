@@ -11,7 +11,7 @@ using System;
 
 namespace AssemblyCSharp
 {
-	public class AIState
+	public abstract class AIState
 	{
 		public AIState ()
 		{

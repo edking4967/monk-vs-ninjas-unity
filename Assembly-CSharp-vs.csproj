@@ -51,10 +51,12 @@
      <Compile Include="Assets\FloatingPlatformTest.cs" />
      <Compile Include="Assets\InvisiTrigger.cs" />
      <Compile Include="Assets\WaterTest.cs" />
+     <Compile Include="Assets\scripts\AI\AIState.cs" />
      <Compile Include="Assets\scripts\CSharpSmoothFollow2D.cs" />
      <Compile Include="Assets\scripts\Damageable.cs" />
-     <Compile Include="Assets\scripts\Dragon.cs" />
-     <Compile Include="Assets\scripts\DragonBody.cs" />
+     <Compile Include="Assets\scripts\Dragon\Dragon.cs" />
+     <Compile Include="Assets\scripts\Dragon\DragonBody.cs" />
+     <Compile Include="Assets\scripts\Dragon\DragonFireState.cs" />
      <Compile Include="Assets\scripts\ExtensionMethods.cs" />
      <Compile Include="Assets\scripts\FloatingPlatform.cs" />
      <Compile Include="Assets\scripts\GameManager.cs" />

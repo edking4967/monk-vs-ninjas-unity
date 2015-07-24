@@ -8,13 +8,15 @@ public class DialogueTrigger : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D c)
 	{
-		displayDialogue = true;
+		if(c.tag=="Player")
+			displayDialogue = true;
 
 	}
 
 	void OnTriggerExit2D(Collider2D c)
 	{
-		displayDialogue = false;
+		if(c.tag=="Player")
+			displayDialogue = false;
 	}
 
 	void OnGUI()

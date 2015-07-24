@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using AssemblyCSharp;
+using Application;
 
 public class Dragon : MonoBehaviour {
 
@@ -20,6 +21,9 @@ public class Dragon : MonoBehaviour {
 		fireTimer = new Timer (1);
 
 		fireTimer.set ();
+
+		currentState = new DragonFireState ();
+		currentState.Start ();
 		
 	}
 
@@ -46,10 +50,12 @@ public class Dragon : MonoBehaviour {
 		else
 			rb.AddForce (new Vector2 (0, 9.81f));
 
-		if (fireTimer.check ()) {
-			fireProjectile();
-			fireTimer.set();
-		}
+
+		currentState.doFixedUpdate ();
+//		if (fireTimer.check ()) {
+//			fireProjectile();
+//			fireTimer.set();
+//		}
 			
 	}
 
