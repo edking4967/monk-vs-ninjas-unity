@@ -52,8 +52,6 @@
     <Compile Include="Assets\WaterTest.cs" />
     <Compile Include="Assets\scripts\CSharpSmoothFollow2D.cs" />
     <Compile Include="Assets\scripts\Damageable.cs" />
-    <Compile Include="Assets\scripts\Dragon.cs" />
-    <Compile Include="Assets\scripts\DragonBody.cs" />
     <Compile Include="Assets\scripts\ExtensionMethods.cs" />
     <Compile Include="Assets\scripts\FloatingPlatform.cs" />
     <Compile Include="Assets\scripts\GameManager.cs" />
@@ -92,7 +90,9 @@
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>..\..\..\..\Applications\Unity\Unity.app\Contents\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
     </Reference>
-    <Compile Include="Assets\scripts\AIState.cs" />
+    <Compile Include="Assets\scripts\AI\AIState.cs" />
+    <Compile Include="Assets\scripts\Dragon\DragonBody.cs" />
+    <Compile Include="Assets\scripts\Dragon\Dragon.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -102,4 +102,8 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <Folder Include="Assets\scripts\AI\" />
+    <Folder Include="Assets\scripts\Dragon\" />
+  </ItemGroup>
 </Project>

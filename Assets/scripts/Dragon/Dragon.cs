@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using AssemblyCSharp;
 
 public class Dragon : MonoBehaviour {
 
@@ -7,7 +8,7 @@ public class Dragon : MonoBehaviour {
 	bool isMoving;
 	bool isFacingRight = false;
 	Timer fireTimer;
-
+	AIState currentState;
 
 	// Use this for initialization
 	void Start () {
