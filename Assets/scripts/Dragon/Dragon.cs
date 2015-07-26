@@ -10,6 +10,7 @@ public class Dragon : MonoBehaviour {
 	bool isFacingRight = false;
 	Timer fireTimer;
 	AIState currentState;
+	GameObject monk;
 
 	// Use this for initialization
 	void Start () {
@@ -22,8 +23,10 @@ public class Dragon : MonoBehaviour {
 
 		fireTimer.set ();
 
-		currentState = new DragonFireState ();
+		currentState = new DragonInitialState ();
 		currentState.Start ();
+
+		monk = GameObject.Find ("Monk");
 		
 	}
 
@@ -31,13 +34,14 @@ public class Dragon : MonoBehaviour {
 	{
 		Debug.Log ("fireProjectile");	
 		GameObject proj = (GameObject)Instantiate(Resources.Load("Prefabs/projectile")); 
+		proj.tag = "enemyProjectile";
 		proj.transform.position = new Vector2(transform.position.x-.5f, transform.position.y-.5f);
-		Vector2 vel = new Vector2 (.1f,0);
-		
-		if (!isFacingRight)
-			vel = -vel;
-		
-		proj.GetComponent<Rigidbody2D> ().AddForce (vel);
+		float velMag = .1f;
+
+		Vector2 velDir = monk.transform.position - proj.transform.position;
+		velDir = velDir / velDir.magnitude;
+
+		proj.GetComponent<Rigidbody2D> ().AddForce (velDir * velMag);
 
 	}
 
@@ -45,23 +49,16 @@ public class Dragon : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 
-		if (isMoving)
-			rb.velocity = new Vector2 (0, 1);
-		else
-			rb.AddForce (new Vector2 (0, 9.81f));
-
-
 		currentState.doFixedUpdate ();
-//		if (fireTimer.check ()) {
-//			fireProjectile();
-//			fireTimer.set();
-//		}
 			
 	}
 
 	void OnTriggerEnter2D(Collider2D collider)
 	{
-		if(collider.gameObject.tag == "DragonStop")
-			isMoving = false;
+		if (collider.gameObject.tag == "DragonStop") {
+			currentState = new DragonFireState ();
+			currentState.Start();
+		}
+
 	}
 }

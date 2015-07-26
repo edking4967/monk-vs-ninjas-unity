@@ -57,6 +57,7 @@
      <Compile Include="Assets\scripts\Dragon\Dragon.cs" />
      <Compile Include="Assets\scripts\Dragon\DragonBody.cs" />
      <Compile Include="Assets\scripts\Dragon\DragonFireState.cs" />
+     <Compile Include="Assets\scripts\Dragon\DragonInitialState.cs" />
      <Compile Include="Assets\scripts\ExtensionMethods.cs" />
      <Compile Include="Assets\scripts\FloatingPlatform.cs" />
      <Compile Include="Assets\scripts\GameManager.cs" />
