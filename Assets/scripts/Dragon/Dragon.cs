@@ -24,7 +24,7 @@ public class Dragon : MonoBehaviour {
 		fireTimer.set ();
 
 		currentState = new DragonInitialState ();
-		currentState.Start ();
+		currentState.doStart (this.gameObject);
 
 		monk = GameObject.Find ("Monk");
 		
@@ -57,7 +57,7 @@ public class Dragon : MonoBehaviour {
 	{
 		if (collider.gameObject.tag == "DragonStop") {
 			currentState = new DragonFireState ();
-			currentState.Start();
+			currentState.doStart(this.gameObject);
 		}
 
 	}

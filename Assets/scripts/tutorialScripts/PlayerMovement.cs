@@ -8,6 +8,7 @@
 using UnityEngine;
 using System.Collections;
 using GameEvents;
+using Application;
 
 public class PlayerMovement : MonoBehaviour, GameEventListener 
 {
@@ -38,13 +39,13 @@ public class PlayerMovement : MonoBehaviour, GameEventListener
 		{
 			Vector3 d = (e as PlayerMoveEvent).direction;
 
-			GetComponentInParent<MonkController>().run (d);
+			GetComponentInParent<GravitySprite>().run(d);
 
 			handlePlayerFlip(d);
 		}
 
 		if (e is PlayerJumpEvent) {
-			GetComponent<MonkController>().jump();
+			GetComponent<GravitySprite>().jump();
 		}
    }
 

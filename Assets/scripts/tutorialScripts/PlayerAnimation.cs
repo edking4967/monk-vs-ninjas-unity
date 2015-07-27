@@ -20,6 +20,7 @@ public class PlayerAnimation : MonoBehaviour, GameEventListener {
 	
 	public void eventReceived(GameEvent e)
 	{
+		/*
 		if(e is PlayerMoveEvent)
 			animator.Play ("running");
 
@@ -31,6 +32,7 @@ public class PlayerAnimation : MonoBehaviour, GameEventListener {
 
 		if(e is PlayerHitEvent)
 			animator.Play ("hit");
+		*/
 
 		if (e is PlayerFlipEvent) {
 			Vector3 scale = transform.localScale;

@@ -34,7 +34,7 @@ namespace Application
 			}
 		}
 
-		public override void Start()
+		public override void doStart(GameObject g)
 		{
 			fireTimer = new Timer (1);
 			

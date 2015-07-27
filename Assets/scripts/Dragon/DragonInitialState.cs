@@ -28,7 +28,7 @@ namespace Application
 			rb.velocity = new Vector2 (0, 1);
 		}
 
-		public override void Start()
+		public override void doStart(GameObject g)
 		{
 			dragon = GameObject.Find ("dragon").GetComponent<Dragon> ();
 			rb = GameObject.Find ("dragon").GetComponent<Rigidbody2D> ();

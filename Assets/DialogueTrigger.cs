@@ -53,6 +53,10 @@ public class DialogueTrigger : MonoBehaviour {
 		GUI.skin = skin;
 		GUILayout.BeginArea(new Rect(50,50, 250,250));
 		GUILayout.BeginVertical();
+
+		//Texture myTex = (Texture)Resources.Load ("monkMed", typeof(Texture));
+		//GUILayout.Box(myTex);
+
 		GUILayout.Box(dialogues[dialogueNum]);
 		GUILayout.EndVertical();
 		
