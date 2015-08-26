@@ -25,7 +25,7 @@ public class InputManager : MonoBehaviour
    ///////////////////////////////////////////////////////////////////////////
 	
 	// Update is called once per frame
-	void FixedUpdate () 
+	void Update () 
    {
         
       if(Input.GetKey(left))
@@ -38,7 +38,6 @@ public class InputManager : MonoBehaviour
 			GameEventManager.post (new PlayerJumpEvent ());
 
 		if (Input.GetKeyDown (fire)) {
-			Debug.Log ("fire key pressed");
 			GameEventManager.post (new PlayerFireEvent ());
 		}
 

@@ -1,7 +1,7 @@
 using UnityEngine;
-using UnityEditor;
+//using UnityEditor;
 using System.Collections;
- 
+ /*
 [CustomEditor(typeof(MeshRenderer))]
 public class MeshRendererSortingLayersEditor : Editor
 {
@@ -31,3 +31,4 @@ public class MeshRendererSortingLayersEditor : Editor
     }
 }
 
+*/

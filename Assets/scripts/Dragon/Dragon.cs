@@ -11,11 +11,12 @@ public class Dragon : MonoBehaviour {
 	Timer fireTimer;
 	AIState currentState;
 	GameObject monk;
+	GameObject proj;
+	Vector2 velDir;
 
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
-		//rb.mass = 1;
 	
 		isMoving = true;
 
@@ -32,13 +33,12 @@ public class Dragon : MonoBehaviour {
 
 	public void fireProjectile()
 	{
-		Debug.Log ("fireProjectile");	
-		GameObject proj = (GameObject)Instantiate(Resources.Load("Prefabs/projectile")); 
+		proj = (GameObject)Instantiate(Resources.Load("Prefabs/projectile")); 
 		proj.tag = "enemyProjectile";
 		proj.transform.position = new Vector2(transform.position.x-.5f, transform.position.y-.5f);
-		float velMag = .1f;
+		float velMag = .05f;
 
-		Vector2 velDir = monk.transform.position - proj.transform.position;
+		velDir = monk.transform.position - proj.transform.position;
 		velDir = velDir / velDir.magnitude;
 
 		proj.GetComponent<Rigidbody2D> ().AddForce (velDir * velMag);

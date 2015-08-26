@@ -7,6 +7,11 @@ public class Damageable : MonoBehaviour {
 	float timeSave;
 	Timer timer;
 	GameObject damageBG;
+	Vector2 newPos;
+	public GameObject damagePrefab;
+	public float offsetLR;
+	public float offsetUD;
+	public int health;
 
 	void Start()
 	{
@@ -24,19 +29,42 @@ public class Damageable : MonoBehaviour {
 
 	void Update()
 	{
-
 		if (timer.check ()) {
 			clearDamage();
+
+			if(health == 0)
+				Destroy (this.gameObject);
+		}
+
+
+		// Update position of damage background:
+		if (damageBG) {
+			newPos = this.transform.position;
+			newPos.x += offsetLR;
+			newPos.y += offsetUD;
+			damageBG.transform.position = newPos;
 		}
 	}
-
-	void doDamage()
+	
+	bool doDamage()
 	{
+		if (timer.isRunning ())
+			return false;
+
 		GetComponent<SpriteRenderer> ().color = Color.red;
-		damageBG = (GameObject)Instantiate(Resources.Load("Prefabs/damageBG")); 
-		Vector2 newPos = this.transform.position;
+
+		// Instantiate a damageBG only if one doesn't already exist:
+		if(!damageBG)
+			damageBG = Instantiate (damagePrefab);
+
+		newPos = this.transform.position;
+		newPos.x += offsetLR;
+		newPos.y += offsetUD;
 		damageBG.transform.position = newPos;
+
+		health--;
 		timer.set ();
+		return true;
 	}
 
 	void clearDamage()

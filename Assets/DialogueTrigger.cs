@@ -3,15 +3,20 @@ using System.Collections;
 
 public class DialogueTrigger : MonoBehaviour {
 	public GUISkin skin;
+	public TextAsset dialogueAsset;
 
 	bool displayDialogue = false;
 
-	string [] dialogues = {"Hello", "Are you ready for an adventure?"};
+	string [] dialogues ;
+	string dialogue;
 	int dialogueNum;
 
 	public void Start()
 	{
+		dialogue  = dialogueAsset.text;
+		dialogues = dialogue.Split ('\n');
 		dialogueNum = 0;
+		Debug.Log (dialogues.Length);
 	}
 
 	void OnTriggerEnter2D(Collider2D c)
@@ -23,6 +28,7 @@ public class DialogueTrigger : MonoBehaviour {
 
 		if (displayDialogue && c.tag == "Projectile") {
 			advanceDialogue();
+			Destroy(c.gameObject);
 		}
 	}
 
@@ -39,7 +45,7 @@ public class DialogueTrigger : MonoBehaviour {
 
 	void advanceDialogue()
 	{
-		if (dialogueNum < dialogues.Length)
+		if (dialogueNum < dialogues.Length )
 			dialogueNum++;
 		else
 			dialogueNum = 0;
@@ -54,10 +60,8 @@ public class DialogueTrigger : MonoBehaviour {
 		GUILayout.BeginArea(new Rect(50,50, 250,250));
 		GUILayout.BeginVertical();
 
-		//Texture myTex = (Texture)Resources.Load ("monkMed", typeof(Texture));
-		//GUILayout.Box(myTex);
-
-		GUILayout.Box(dialogues[dialogueNum]);
+		if (dialogueNum != dialogues.Length) 
+			GUILayout.Box(dialogues[dialogueNum]);
 		GUILayout.EndVertical();
 		
 		GUILayout.EndArea ();

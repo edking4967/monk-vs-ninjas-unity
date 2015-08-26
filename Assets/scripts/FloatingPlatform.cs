@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FloatingPlatform : Platform {
+public class FloatingPlatform : MonoBehaviour {
 
     Rigidbody2D rb;
 	
@@ -9,6 +9,7 @@ public class FloatingPlatform : Platform {
     {
         rb = GetComponent<Rigidbody2D>();
     } 
+	
 
 	void OnTriggerStay2D(Collider2D hit)
 	{

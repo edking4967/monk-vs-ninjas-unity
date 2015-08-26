@@ -7,6 +7,7 @@ public class CSharpSmoothFollow2D : MonoBehaviour
 	public float smoothTime = 0.3f;
 	private Transform thisTransform;
 	private Vector2 velocity;
+	public bool allowedToMove=true;
 	
 	private void Start()
 	{
@@ -15,11 +16,13 @@ public class CSharpSmoothFollow2D : MonoBehaviour
 	
 	private void Update() 
 	{
-		Vector3 vec = thisTransform.position;
-		vec.x = Mathf.SmoothDamp( thisTransform.position.x, 
+		if (allowedToMove) {
+			Vector3 vec = thisTransform.position;
+			vec.x = Mathf.SmoothDamp (thisTransform.position.x, 
 		                         target.position.x, ref velocity.x, smoothTime);
-		vec.y = Mathf.SmoothDamp( thisTransform.position.y, 
+			vec.y = Mathf.SmoothDamp (thisTransform.position.y, 
 		                         target.position.y, ref velocity.y, smoothTime);
-		thisTransform.position = vec;
+			thisTransform.position = vec;
+		}
 	}
 }
